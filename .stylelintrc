@@ -1,0 +1,17 @@
+{
+  "extends": "stylelint-config-recommended-scss",
+  "plugins": [
+    "stylelint-scss",
+    "stylelint-declaration-use-variable"
+  ],
+  "rules": {
+    "no-descending-specificity": null,
+    "sh-waqar/declaration-use-variable": [
+      [
+        "/color/",
+        "font-weight",
+        "font-family"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+mixin counter-item(props)
+  -var {title, count, description} = props
+  .counter-item(class=className data-animation="counter-item")
+    .counter-item__count
+      if count
+        p(data-animation="number")= count
+      if description
+        p.extra= description
+    .counter-item__title
+      p= title
+
+mixin card_news(props)
+  - var {title, text, img} = props
+  .card.card_news
+    .card__image
+      img(src= img alt="News item")
+    .card__content
+      .card__title !{title}
+      .card__text !{text}
+      .card__buttons
+        a.link.link--line.link--self(href='#') Learn more
+        time(datetime="2018-06-15") 15 July 2018

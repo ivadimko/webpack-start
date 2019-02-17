@@ -1,0 +1,79 @@
+@mixin if-touch() {
+	@media (pointer: coarse) {
+		@content;
+	}
+}
+
+@mixin if-edge() {
+	@supports (-ms-ime-align:auto) {
+		@content
+	}
+}
+
+@mixin if-ie() {
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+		@content
+	}
+}
+
+@mixin covers-parent {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+@mixin hover($property, $to-value) {
+	transition: $property $duration $easing;
+
+	&:hover {
+		#{$property}: $to-value;
+	}
+}
+
+@mixin webkit-smoothscroll {
+	overflow: hidden;
+	overflow-y: scroll;
+
+	-webkit-overflow-scrolling: touch;
+}
+
+@mixin visually-hidden {
+	position: absolute !important;
+
+	clip: rect(0 0 0 0) !important;
+
+	width: 1px !important;
+	height: 1px !important;
+	margin: -1px !important;
+}
+
+
+@mixin box-shadow {
+	box-shadow: 0 10px 25px 0 $c-shadow;
+}
+
+@mixin header-height($property, $multiplier: 1) {
+	@include if-smaller-than(l) {
+		#{$property}: $header-size_m * $multiplier;
+	}
+
+	#{$property}: $header-size * $multiplier;
+}
+
+@mixin layers {
+  display: -ms-grid;
+  display: grid;
+  grid-template-areas: 'layers';
+  grid-template-columns: 100%;
+  > * {
+    grid-area: layers;
+  }
+  &__center {
+    align-self: center;
+  }
+  &__end {
+    align-self: end;
+  }
+}

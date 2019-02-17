@@ -1,0 +1,49 @@
+// modals
+
+@mixin has-modal {
+  #{$has-modal} & {
+    @content
+  }
+}
+
+@mixin menu-opened {
+  #{$menu-opened} & {
+    @content
+  }
+}
+
+@mixin has-cookies {
+  #{$has-cookies} & {
+    @content
+  }
+}
+
+@mixin has-preloader {
+  #{$has-preloader} & {
+    @content;
+  }
+}
+
+@mixin icon-styles {
+  [class^="icon-"] {
+    @content;
+  }
+}
+
+@mixin letter-styles {
+  [class*="char"] {
+    @content
+  }
+}
+
+@mixin word-styles {
+  [class*="word"] {
+    @content
+  }
+}
+
+@mixin line-styles {
+  [class*="line"] {
+    @content
+  }
+}

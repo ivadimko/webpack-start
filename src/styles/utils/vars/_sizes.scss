@@ -1,0 +1,39 @@
+// screen size breakpoints
+$responsive-breakpoints: (
+  xxs:  420px,
+  xs:   576px,
+  s:    640px ,
+  m:    768px,
+  lg:    992px,
+  l:    1024px,
+  xl:   1200px,
+  xxl:  1440px
+);
+$responsive-breakpoints_vertical: (
+  xs: 420px,
+  s: 520px,
+  m: 620px,
+  l: 768px
+);
+
+//margin-padding
+
+$section-indent: 40px;
+
+$indent-xxl:  40px;
+$indent-xl:   25px;
+$indent-l:    20px;
+$indent-m:    15px;
+$indent-s:    10px;
+$indent-xs:   5px;
+$indent-xxs:  3px;
+
+$z-index_below: -1;
+$z-index_above: 1;
+$z-index_header: 3;
+$z-index_header-items: 5;
+$z-index_above-header: 4;
+
+// foundation overrides
+$grid-container: 90rem;
+$breakpoint-classes: (small medium large xlarge xxlarge);

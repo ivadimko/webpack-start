@@ -1,0 +1,176 @@
+body {
+	@include webkit-smoothscroll;
+
+  @include icon-styles {
+    @include font-size(20);
+  }
+  @include letter-styles {
+    font-size: inherit;
+
+    display: inline-block;
+
+    min-width: 0.25em;
+  }
+  @include word-styles {
+    white-space: nowrap;
+    font-size: inherit;
+
+    display: inline-block;
+  }
+
+	@include line-styles {
+		display: block;
+	}
+}
+
+html {
+	&.has-modal {
+		&,
+		& body {
+			overflow: hidden;
+		}
+	}
+}
+
+a {
+  color: $c-current;
+  text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
+
+	&:focus {
+		text-decoration: none;
+
+		outline: none;
+	}
+}
+
+li:focus {
+	outline: none;
+}
+
+img {
+	display: inline-block;
+
+	border: none;
+	outline: none;
+
+	&:focus {
+		outline: none;
+	}
+
+  // For edge lazy-load images
+  &[data-src],
+  &[data-srcset] {
+    display: block;
+    min-height: 1px;
+  }
+}
+
+ul {
+	margin-bottom: 0;
+
+	list-style: none;
+}
+
+ol {
+	list-style-position: inside;
+}
+
+b {
+	font-weight: $font-weight_bold;
+}
+
+p {
+	margin: 0;
+}
+
+blockquote {
+	font-weight: $font-weight_semibold;
+
+	margin: $indent-l 0;
+	padding-left: $indent-xl;
+
+	border-left: 1px solid $c-void;
+}
+
+address {
+	font-style: normal;
+}
+
+figure {
+	margin: 0;
+}
+
+// forms
+input,
+textarea,
+button,
+select {
+	border: none;
+	background: transparent;
+	box-shadow: none;
+}
+
+button {
+	cursor: pointer;
+  color: $c-current;
+}
+
+textarea {
+	resize: none;
+	vertical-align: top;
+}
+
+label {
+	margin-bottom: 0;
+}
+
+fieldset {
+	border: none;
+}
+
+input,
+textarea,
+button {
+	&:focus {
+		outline: none;
+	}
+}
+
+select {
+	appearance: none;
+
+	&::-ms-expand {
+		display: none;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+// end forms
+
+.grid-container {
+	width: 100%;
+}
+
+.layers {
+	@include layers;
+}
+
+.scrollbar-measure {
+	position: absolute;
+	top: -9999px;
+
+	overflow: scroll;
+
+	width: 100px;
+	height: 100px;
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}

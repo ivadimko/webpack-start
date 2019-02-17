@@ -1,0 +1,23 @@
+@mixin if-smaller-than($breakpoint-name) {
+  @if map-has-key($responsive-breakpoints, $breakpoint-name) {
+    @media (max-width: map-get($responsive-breakpoints, $breakpoint-name) - 1) {
+      @content;
+    }
+  }
+}
+
+@mixin if-bigger-than($breakpoint-name) {
+  @if map-has-key($responsive-breakpoints, $breakpoint-name) {
+    @media (min-width: map-get($responsive-breakpoints, $breakpoint-name)) {
+      @content;
+    }
+  }
+}
+
+@mixin if-lower-than($breakpoint-name) {
+  @if map-has-key($responsive-breakpoints_vertical, $breakpoint-name) {
+    @media (max-height: map-get($responsive-breakpoints_vertical, $breakpoint-name)) {
+      @content;
+    }
+  }
+}

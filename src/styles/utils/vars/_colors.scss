@@ -1,0 +1,15 @@
+// color variables
+$c-transparent: transparent;
+$c-current: currentColor;
+$c-green: #74BF43;
+$c-red: #FD3D3D;
+$c-void: #000;
+$c-white: #fff;
+$c-gray: #8a8989;
+$c-dark: #131313;
+$c-shadow: transparentize($c-void, 0.9); // To avoid different box-shadows in one UI
+
+// status
+$c-error: $c-red;
+$c-notice: #FFB424;
+$c-success: $c-green;

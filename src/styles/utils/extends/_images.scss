@@ -1,0 +1,40 @@
+%image_cover {
+  position: relative;
+  display: block;
+  img, video {
+    font-family: $f-polyfill-cover;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+}
+
+%image_responsive{
+  @include if-smaller-than(l) {
+    height: auto;
+    padding-top: percentage(9/16);
+  }
+}
+
+%image-hover_default {
+  position: relative;
+
+  overflow: hidden;
+  img {
+    transition: transform $duration * 1.2 $easing;
+    transform: scale(1.1) translateZ(0);
+  }
+}
+
+%image-hover_active {
+  img {
+    transform: scale(1) translateZ(0);
+  }
+}
+

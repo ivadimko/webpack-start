@@ -1,0 +1,15 @@
+@import '~@/icomoon/style.css';
+
+@import '~foundation-sites/scss/foundation';
+
+@include foundation-xy-grid-classes(
+        $base-grid: true,
+        $margin-grid: true,
+        $padding-grid: false,
+        $block-grid: false,
+        $collapse: false,
+        $offset: true,
+        $vertical-grid: false,
+        $frame-grid: false
+);
+@include foundation-flex-classes;

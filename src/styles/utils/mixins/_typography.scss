@@ -1,0 +1,16 @@
+// size-default for 320px width
+// size-big for 1440px + width
+
+@mixin font-size($size_default, $size_big: 0) {
+	@if ($size_big == 0) {
+		font-size: $size_default * 1px;
+	} @else {
+		$multiplier: $size_big - $size_default;
+
+		@include if-bigger-than(xxl) {
+			font-size: #{$size_big}px;
+		}
+
+		font-size: calc(#{$size_default}px + ((#{$multiplier} * (100vw - 320px)) / 1120));
+	}
+}

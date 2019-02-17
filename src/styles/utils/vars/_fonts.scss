@@ -1,0 +1,23 @@
+// font variables and mixins
+
+$f-arial: 'Arial', sans-serif;
+
+$primary_font: $f-arial;
+$secondary_font: $f-arial;
+
+$f-sans-serif: $f-arial;
+$f-serif: serif;
+
+$f-icon: 'icomoon';
+
+$f-polyfill-cover: 'object-fit: cover;';
+$f-polyfill-contain: 'object-fit: contain;';
+
+//font-weight
+$font-weight_light: 300;
+$font-weight_regular: 400;
+$font-weight_medium: 500;
+$font-weight_semibold: 600;
+$font-weight_bold: 700;
+$font-weight_extra-bold: 800;
+$font-weight_heavy: 900;
